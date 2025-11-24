@@ -1,33 +1,70 @@
-# INSTALACION FRONT
---Front contiene 2 partes
-    -- UI -> React + TypeScritp + Vite para generar html y js
-    -- Modules -> Scripts de RageMP + TypeScript + rollup para generar js
+# Instalación Front
 
---Carpeta dist / si no existe crear
-    --En la carpeta dist pegaremos todo el contenido de ragemp server-files -> C:\RAGEMP\server-files
-    --El build js de ragemp client-side se guarda en -> dist\client_packages\index.js
-    --El build de ui React se guarda en -> dist\client_packages\ui 
-        --index.html
-        --index.js
-        --index.js.map
-        --assets -> css/images
+El **Front** contiene 2 partes:
 
+1. **UI** → React + TypeScript + Vite para generar HTML y JS  
+2. **Modules** → Scripts de RageMP + TypeScript + Rollup para generar JS
 
---Config
-    --Vite
-        --vite build --watch --config vite.config.ts -> Detectar cambios y generar build en la carpeta dist
-        --vite dev --mode development -> Arrancar servidor local para debugar parte react
-    --Rollup
-        --rollup -c rollup.client.config.cjs -w -> Detectar cambios y generar build en la carpeta dist
-        --rollup -c rollup.client.config.cjs -> Generar build en carpeta dist
-    --Dev React en navegador local (no CIF RAGEMP)
-        --Al arrancar solo react la ejecucion de eventos RageMP no funciona y fallara por no interpretar las variables
-        --Con ui/utils/mp-sage.ts solucionamos este problema generando eventos sinteticos para que no fallen y simulen la llamada al evento
-    --Dev Ragemp en navegador local (no Game)
-        --Actualmente no hay forma de poder debugar la logica del client RageMP
+---
 
---Start
-    --npm run dev -> Arrancar el proyecto en modo desarrollo 
-        --Arrancar/Reinicia servidor ragemp-server.exe y detectara cambios en ui + client para compilar si hay cambios
-    --npm run dev:ui -> Arrancar servidor local para debugar parte react
-    --npm run build -> Genera la build de ui + client en la carpeta dist
+## 📁 Estructura de carpetas
+
+- **Carpeta `dist/`** (si no existe, crear).
+- En la carpeta `dist` se debe pegar todo el contenido de **ragemp server-files**  
+  `C:\RAGEMP\server-files`
+
+### 📦 Builds generados
+
+- **Build JS de RageMP client-side:**  
+  `dist/client_packages/index.js`
+
+- **Build de UI (React):**  
+  `dist/client_packages/ui`
+  - `index.html`
+  - `index.js`
+  - `index.js.map`
+  - `assets/` (css / images)
+
+---
+
+## ⚙️ Configuración
+
+### Vite
+- `vite build --watch --config vite.config.ts`  
+  Detecta cambios y genera el build en la carpeta `dist`.
+
+- `vite dev --mode development`  
+  Arranca un servidor local para debugear la parte React.
+
+### Rollup
+- `rollup -c rollup.client.config.cjs -w`  
+  Detecta cambios y genera el build en `dist`.
+
+- `rollup -c rollup.client.config.cjs`  
+  Genera el build en `dist`.
+
+---
+
+## 🧪 Desarrollo
+
+### Dev React en navegador local (No CEF RageMP)
+- Al arrancar solo React, la ejecución de eventos RageMP **no funciona**, fallará por no interpretar las variables.
+- Con `ui/utils/mp-sage.ts` se solucionan estos problemas generando **eventos sintéticos** para simular la llamada a eventos.
+
+### Dev RageMP en navegador local (No Game)
+- Actualmente **no esta implementado debugear la lógica del client RageMP**.
+
+---
+
+## 🚀 Start / Scripts
+
+- `npm run dev`  
+  Arranca el proyecto en modo desarrollo.  
+  Iniciar/Reiniciar `ragemp-server.exe`  
+  Detectará cambios en UI + client para compilar si los hay.
+
+- `npm run dev:ui`  
+  Arranca servidor local para debugear React.
+
+- `npm run build`  
+  Genera la build de UI + client en la carpeta `dist`.
