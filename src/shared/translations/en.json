@@ -1,0 +1,6 @@
+{
+  "ui.welcome": "Welcome {{name}}!",
+  "ui.inventory.title": "Inventory",
+  "client.vehicle.speed": "Speed: {{speed}} km/h",
+  "system.error.notFound": "Error: not found"
+}
