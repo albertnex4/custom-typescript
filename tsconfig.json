@@ -4,6 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -16,7 +17,6 @@
     /* Configuración de Directorios */
     "rootDir": "src",
     "outDir": "dist",
-    "resolveJsonModule": true,
 
     /* Configuración de Tipos */
     "types": ["./node_modules/@ragempcommunity/types-client"]

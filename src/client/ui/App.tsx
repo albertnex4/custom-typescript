@@ -1,6 +1,7 @@
 import logo from "./assets/logo.png";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import mp from "./utils/mp-sage";
+import { RichText } from "./components/base/RichText";
 
 export const App = () => {
 
@@ -23,6 +24,7 @@ export const App = () => {
             <button onClick={handleIncrement}>Enviar evento a RAGEMP</button>
             <h2>Counter : {text}</h2>
             <img src={logo} alt="Logo" />
+            <RichText k="client.vehicle.speed" params={{ speed: "55" }} />
         </div>
     );
 };

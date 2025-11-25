@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "react-jsx",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "importHelpers": true,          // <--- RECOMENDADO
     "noEmitHelpers": true           // <--- evita duplicar helpers

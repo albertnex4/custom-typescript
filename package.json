@@ -11,7 +11,8 @@
     "dev:client:ui": "vite build --watch --config vite.config.ts",
     "dev:client": "rollup -c rollup.client.config.cjs -w",
     "dev:server": "cd dist && nodemon --ext js --exec ragemp-server.exe",
-    "dev": "concurrently \"npm run dev:client:ui\" \"npm run dev:client\" \"npm run dev:server\""
+    "dev": "concurrently \"npm run dev:client:ui\" \"npm run dev:client\" \"npm run dev:server\"",
+    "i18n:types": "node ./src/tools/generate-translation-types.cjs"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "@ragempcommunity/types-cef": "^2.1.9",
     "@ragempcommunity/types-client": "^2.1.9",
     "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.3.1",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.6",

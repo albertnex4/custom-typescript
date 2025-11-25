@@ -68,3 +68,6 @@ El **Front** contiene 2 partes:
 
 - `npm run build`  
   Genera la build de UI + client en la carpeta `dist`.
+
+- `npm run i18n:types`  
+  Genera Translation.types.ts con todas las keys de las traduciones /shared/translations/*.json

@@ -3,6 +3,7 @@ const resolve = require('@rollup/plugin-node-resolve').default;
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('@rollup/plugin-typescript');
 const { terser } = require('@rollup/plugin-terser');
+const json = require('@rollup/plugin-json');
 const path = require('path');
 
 module.exports = {
@@ -29,6 +30,8 @@ module.exports = {
     typescript({
       tsconfig: './tsconfig.client.json'
     }),
+
+    json()
 
   ]
 };
