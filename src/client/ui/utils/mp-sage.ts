@@ -6,6 +6,16 @@ const mpSafe = (window as any).mp ?? {
   events: {
     add: (...args: any[]) => {
       console.log("[mp.events.add MOCK]", ...args);
+    },
+    remove: (...args: any[]) => {
+      console.log("[mp.events.remove MOCK]", ...args);
+    }
+  },
+  gui: {
+    chat: {
+      push: (...args: any[]) => {
+        console.log("[mp.gui.chat.push MOCK]", ...args);
+      }
     }
   }
 };

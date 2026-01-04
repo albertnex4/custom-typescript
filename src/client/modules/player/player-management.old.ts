@@ -1,5 +1,5 @@
 // src/client/modules/player/player-management.ts
-import TranslationManager from "../../../shared/TranslationManager";
+/*import TranslationManager from "../../../shared/TranslationManager";
 //Xapu!! Con esto funcionan las trducciones en el cliente pero no son dinamicas
 import en from "../../../client/ui/public/translations/en.json";
 
@@ -28,4 +28,4 @@ mp.keys.bind(0x45, true, () => { // Tecla E
         brow.destroy();
         mp.gui.cursor.show(false, false);
     }
-});
+});*/

@@ -3,3 +3,16 @@ body {
   padding: 2rem;
   text-align: end;
 }
+
+.app-container {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.app-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}

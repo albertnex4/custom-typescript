@@ -2,14 +2,18 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
+    "outDir": "dist/client_packages",
     "strict": true,
     "jsx": "react-jsx",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "importHelpers": true,          // <--- RECOMENDADO
-    "noEmitHelpers": true           // <--- evita duplicar helpers
+    "noEmitHelpers": true,           // <--- evita duplicar helpers
+
+    /* Configuración de Tipos */
+    "types": ["./node_modules/@ragempcommunity/types-client"]
   },
-  "include": ["src/client/modules/**/*.ts", "src/client/modules/**/*.tsx", "src/client/types/**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/client/modules/**/*.ts", "src/client/modules/**/*.tsx", "src/client/types/**/*.d.ts", "src/shared/**/*.json", "src/shared/**/*.ts"],
+  "exclude": ["node_modules", "src/client/ui"]
 }
