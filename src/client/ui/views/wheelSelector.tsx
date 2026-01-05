@@ -62,9 +62,14 @@ const vehicleActions: ActionItem[] = [
     ],
   },
   {
+    id: 'gear',
+    label: 'Gear',
+    icon: <Icons.Gear />,
+  },
+  {
     id: 'doors',
     label: 'Puertas',
-    icon: <Icons.Door />,
+    icon: <Icons.CarDoor />,
     subActions: [
       { id: 'lock', label: 'Bloquear', icon: <Icons.Lock />, onSelect: () => console.log('Doors Locked') },
       { id: 'unlock', label: 'Desbloquear', icon: <Icons.Unlock />, onSelect: () => console.log('Doors Unlocked') },
@@ -113,60 +118,8 @@ const vehicleActions: ActionItem[] = [
 
 const WheelSelector: React.FC = () => {
   const [open, setOpen] = useState(true);
-  const [actions, setActions] = useState<ActionItem[]>(defaultActions);
+  //const [actions, setActions] = useState<ActionItem[]>(defaultActions);
   const [text ,setText] = useState<string>("No data");
-
-  
-  useEffect(() => {
-  // @ts-ignore
-  window.ui = {
-    setWheelActions: (data : string) => {
-      switch (data) {
-      case 'vehicle':
-        setText(`Enter data!!!! ${data}`);
-        setActions(vehicleActions);
-        break;
-      case 'ped':
-      case 'object':
-        setText(`Enter data!!!! ${data}`);
-        setActions(actions);
-        break;
-      default:
-        setText(`Enter data!!!! ${data}`);
-        setActions(defaultActions);
-    }
-    },
-  };
-
-  return () => {
-    // @ts-ignore
-    delete window.ui;
-  };
-}, []);
-
-
-  mp.events.add("ui:changeWheelSelector", (data:string) => {
-    //setText(`Enter data!!!! ${data}`);
-    //const finalData = JSON.parse(data);
-    //const info = finalData.info;
-    let wheelActions = null;
-  
-    switch (data) {
-      case 'vehicle':
-        setText(`Enter data!!!! ${data}`);
-        setActions(vehicleActions);
-        break;
-      case 'ped':
-      case 'object':
-        setText(`Enter data!!!! ${data}`);
-        setActions(actions);
-        break;
-      default:
-        setText(`Enter data!!!! ${data}`);
-        setActions(defaultActions);
-    }
-
-  });
 
   return (
     <div className="app-root">
@@ -174,7 +127,7 @@ const WheelSelector: React.FC = () => {
       <p>Open a gamepad and move the left joystick / dpad to navigate; press A / button 0 to select.</p>
       <p>{text}</p>
       <div style={{ width: 520, height: 520 }}>
-        <RadialMenu actions={actions} open={open} onClose={() => setOpen(false)} />
+        <RadialMenu open={open} onClose={() => setOpen(false)} />
       </div>
       <div style={{ marginTop: 18 }}>
         <button onClick={() => setOpen(o => !o)}>{open ? 'Hide' : 'Show'} Menu</button>
@@ -201,7 +154,7 @@ export function describeDonutSlice(cx: number, cy: number, innerR: number, outer
 }
 
 type Props = {
-  actions: ActionItem[];
+  //actions: ActionItem[];
   open?: boolean;
   onClose?: () => void;
 };
@@ -290,9 +243,11 @@ type HoveredState = {
   actual: number | null;
 };
 
-const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
-  const [currentMenuTest, setCurrentMenuTest] = useState<ActionItem[] | null>(null);
-  const currentMenu = currentMenuTest !== null ? currentMenuTest : actions;
+const MAX_ANGLE = 360;
+
+const RadialMenu: React.FC<Props> = ({ open = true, onClose }) => {
+  const [currentMenu, setCurrentMenu] = useState<ActionItem[]>(vehicleActions);
+  //const currentMenu = currentMenuTest !== null ? currentMenuTest : actions;
   const [history, setHistory] = useState<ActionItem[][]>([]);
   const [hovered, setHovered] = useState<HoveredState>({
     old: null,
@@ -300,8 +255,11 @@ const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
   });
   
   const count = currentMenu.length;
-  const anglePer = useRef<number>(360 / count);
-  //const count = actions.length;
+  const angleTest = MAX_ANGLE / count;
+  const anglePer = useRef<number>(angleTest);
+  if(anglePer.current !== angleTest){
+    anglePer.current = angleTest;
+  }
 
   const [gpIndex] = useGamepadNavigation(count, open);
   const radiusOuter = 200;
@@ -313,14 +271,14 @@ const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
     const lastHisory = history[history.length - 1];
     const { fillPercentage, notFilled } = lastHisory[hovered.old];
     if(notFilled){
-        anglePer.current = 360 / lastHisory.length;
+        anglePer.current = MAX_ANGLE / lastHisory.length;
     }
     else if(fillPercentage !== null && fillPercentage !== undefined){
-        let angle = !notFilled ? 360 : fillPercentage;
-        anglePer.current = angle - (fillPercentage / 100 * 360);
+        let angle = !notFilled ? MAX_ANGLE : fillPercentage;
+        anglePer.current = angle - (fillPercentage / 100 * MAX_ANGLE);
     }
     else{
-        anglePer.current = 360 / count;
+        anglePer.current = MAX_ANGLE / count;
     }
   }
   
@@ -336,7 +294,7 @@ const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
     if (item.subActions) {
       // Si tiene sub-acciones, guardamos el menú actual en el historial y entramos
       setHistory(prev => [...prev, currentMenu]);
-      setCurrentMenuTest(item.subActions);
+      setCurrentMenu(item.subActions);
 
       setHovered(prev => ({
         old: prev.actual,
@@ -349,22 +307,63 @@ const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
     }
   };
 
-  const changeActions = (data:string) => {
-    
-  }
-
   const goBack = () => {
     if (history.length > 0) {
       const prevMenu = history[history.length - 1];
       anglePer.current = 360 / prevMenu.length;
       setHistory(prev => prev.slice(0, -1));
-      setCurrentMenuTest(prevMenu);
+      setCurrentMenu(prevMenu);
       setHovered(prev => ({
         old: null,
         actual: null
      }));
     }
   };
+
+  useEffect(() => {
+  // @ts-ignore
+  window.ui = {
+    setWheelActions: (data : string) => {
+      switch (data) {
+      case 'vehicle':
+        setCurrentMenu(vehicleActions);
+        break;
+      case 'ped':
+      case 'object':
+        setCurrentMenu(actions);
+        break;
+      default:
+        setCurrentMenu(defaultActions);
+    }
+    },
+  };
+
+  return () => {
+    // @ts-ignore
+    delete window.ui;
+  };
+}, []);
+
+
+  mp.events.add("ui:changeWheelSelector", (data:string) => {
+    //setText(`Enter data!!!! ${data}`);
+    //const finalData = JSON.parse(data);
+    //const info = finalData.info;
+    let wheelActions = null;
+  
+    switch (data) {
+      case 'vehicle':
+        setCurrentMenu(vehicleActions);
+        break;
+      case 'ped':
+      case 'object':
+        setCurrentMenu(actions);
+        break;
+      default:
+        setCurrentMenu(defaultActions);
+    }
+
+  });
 
   const slices = useMemo(() => {
     return currentMenu.map((a, i) => {
@@ -386,7 +385,7 @@ const RadialMenu: React.FC<Props> = ({ actions, open = true, onClose }) => {
         notFilled : notFilled,
       };
     });
-  }, [currentMenu, center, actions]);
+  }, [currentMenu, center]);
   
   
   useEffect(() => {

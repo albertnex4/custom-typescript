@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconWrapper } from '../../components/base/IconWrapper';
+import { IconWrapper, IconProps } from '../../components/base/IconWrapper';
 
 export const Wifi: React.FC = () => (
   <IconWrapper>
@@ -50,72 +50,85 @@ export const Message: React.FC = () => (
   </IconWrapper>
 );
 
-export const Gear: React.FC = () => (
-  <svg width={72} height={72} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#333">
-      <path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 00.12-.64l-1.92-3.32a.5.5 0 00-.6-.22l-2.39.96a7.07 7.07 0 00-1.63-.94l-.36-2.54a.5.5 0 00-.5-.42h-3.84a.5.5 0 00-.5.42l-.36 2.54c-.57.22-1.1.52-1.63.94l-2.39-.96a.5.5 0 00-.6.22L2.68 8.88a.5.5 0 00.12.64L4.83 11.1c-.04.31-.06.63-.06.94s.02.63.06.94L2.68 15.56a.5.5 0 00-.12.64l1.92 3.32c.14.24.44.34.7.22l2.39-.96c.5.42 1.06.77 1.63.94l.36 2.54c.05.24.25.42.5.42h3.84c.25 0 .45-.18.5-.42l.36-2.54c.57-.22 1.1-.52 1.63-.94l2.39.96c.26.12.56.02.7-.22l1.92-3.32a.5.5 0 00-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1112 8.5a3.5 3.5 0 010 7z" />
-    </g>
-  </svg>
-);
-
-export const Engine: React.FC = () => (
-  <IconWrapper>
-    <path d="M4 9h12l2 3v4h-2v2h-2v-2H8v2H6v-2H4z" />
-    <path d="M16 7V5h-2v2H10V5H8v2H4v2h16V7z" opacity=".7" />
+export const Door: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M5 20V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z" />
+    <path d="M15 12h.01" strokeWidth="3" />
   </IconWrapper>
 );
 
-
-export const Door: React.FC = () => (
-  <IconWrapper>
-    <path d="M6 3l10 2v14l-10 2V3z" />
-    <path d="M13 12a1 1 0 100-2 1 1 0 000 2z" opacity=".7" />
+export const Gear: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0a2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2a2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83a2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0a2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z" />
   </IconWrapper>
 );
 
-export const Lock: React.FC = () => (
-  <IconWrapper>
-    <path d="M7 10V7a5 5 0 0110 0v3h1v10H6V10h1z" />
+export const Engine: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M14 13h-4V9h4v4Z" fill="currentColor" fillOpacity="0.2" />
+    <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" />
+    <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" />
+    <circle cx="12" cy="13" r="3" />
   </IconWrapper>
 );
 
-export const Unlock: React.FC = () => (
-  <IconWrapper>
-    <path d="M17 10V7a5 5 0 00-9.5-2H6a7 7 0 0113 2v3z" />
-    <path d="M6 10h12v10H6z" />
+export const CarDoor: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M4 10V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V10L17 4H7L4 10Z" />
+    <path d="M6 10H18M10 4V10M14 4V10" strokeOpacity="0.5" />
+    <rect x="15" y="13" width="3" height="1.5" rx="0.5" fill="currentColor" />
   </IconWrapper>
 );
 
-export const Lights: React.FC = () => (
-  <IconWrapper>
-    <path d="M4 8h6l2 4-2 4H4z" />
-    <path d="M14 9l4-1M14 12h4M14 15l4 1" opacity=".6" />
+export const Lock: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <rect x="4" y="11" width="16" height="9" rx="2" />
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
   </IconWrapper>
 );
 
-export const Climate: React.FC = () => (
-  <IconWrapper>
-    <path d="M12 2v20M4 6l16 12M4 18L20 6" />
+export const Unlock: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <rect x="4" y="11" width="16" height="9" rx="2" />
+    <path d="M7 11V7a5 5 0 0 1 9-2" />
   </IconWrapper>
 );
 
-export const CarLocation: React.FC = () => (
-  <IconWrapper>
-    <path d="M12 2c-4 0-7 3-7 7 0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" />
-    <path d="M8 11h8l-1-3H9z" opacity=".7" />
+export const Lights: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M3 12h5m-5-6h4m-4 12h4" strokeOpacity="0.5" />
+    <path d="M21 12c0 4.4-3.6 8-8 8h-2V4h2c4.4 0 8 3.6 8 8Z" />
   </IconWrapper>
 );
 
-export const Fuel: React.FC = () => (
-  <IconWrapper>
-    <path d="M6 4h8v16H6z" />
-    <path d="M14 6h2l2 3v7a2 2 0 01-2 2h-2z" opacity=".8" />
+export const Climate: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 2v4m0 12v4M2 12h4m12 0h4" />
+    <path d="m4.9 4.9 2.9 2.9m8.4 8.4 2.9 2.9m0-14.2-2.9 2.9M7.8 16.2l-2.9 2.9" />
   </IconWrapper>
 );
 
-export const Horn: React.FC = () => (
-  <IconWrapper>
-    <path d="M4 10h6l6-4v12l-6-4H4z" />
-    <path d="M18 9c1 1 1 5 0 6" opacity=".6" />
+export const CarLocation: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" fill="currentColor" fillOpacity="0.2" />
+  </IconWrapper>
+);
+
+export const Fuel: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M3 22h12M4 7h10M4 11h10" />
+    <rect x="4" y="2" width="10" height="20" rx="2" />
+    <path d="m14 7 3-3a2 2 0 0 1 3 0v10" />
+  </IconWrapper>
+);
+
+export const Horn: React.FC<IconProps> = (props) => (
+  <IconWrapper {...props}>
+    <path d="M11 5 6 9H2v6h4l5 4V5Z" />
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" strokeOpacity="0.4" />
   </IconWrapper>
 );
