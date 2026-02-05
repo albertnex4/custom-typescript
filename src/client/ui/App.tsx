@@ -51,6 +51,11 @@ export const App = () => {
         }
     }
 
+    /*
+    mp.events.add("ui:navigate", (url: string) => {
+        navigate(url.replace('#/', '/')); // Quita el # si es necesario
+    });
+    */
     const changeUrl = () => {
         navigate("/acerca/123"); // react-router hash manejará #/acerca/123
     }

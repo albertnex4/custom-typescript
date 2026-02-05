@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 //import { App } from './App'
 import { useGlobalWindowEvents } from "./hooks/useGlobalWindowEvents";
@@ -12,7 +12,27 @@ const Root = () =>{
   const toggleVisible = useUIStore((s) => s.toggleVisible);
   const show = useUIStore((s) => s.show);
   const hide = useUIStore((s) => s.hide);
+  const [firstLoad, setFirstLoad] = useState(true);
 
+  //Mejorar para no usar dispatch para interactuar con ragemp
+  //Crear mejor un evento mp.events.add!!!
+  /*
+  mp.events.add("ui:systemEvent", (eventName: string, data?: any) => {
+    switch(eventName) {
+        case "open-app":
+            show();
+            break;
+        case "close-app":
+            hide();
+            break;
+        case "toggle-app":
+            toggleVisible();
+            break;
+        default:
+            console.warn("Unknown system event:", eventName);
+    }
+  });
+*/
   useGlobalWindowEvents(
     ["toggle-app", "open-app", "close-app"],
     (e) => {
@@ -23,10 +43,18 @@ const Root = () =>{
     { passive: true },  // opciones del window listener
   );
 
+  useEffect(() => {
+    // después del primer render, desactivamos la clase
+    setFirstLoad(false);
+  }, []);
+
+  //TODO -> Revisar si la clase problems!!
+  const className = `app-container ${!visible ? "app-hidden" : ""} ${firstLoad ? "problems" : ""}`;
+
   return (
     <React.StrictMode>
     <LanguageProvider>
-      <div className={`app-container ${visible ? "" : "app-hidden"}`}>
+      <div className={className}>
         <HashRouter  basename='/'>
           <App />
         </HashRouter >

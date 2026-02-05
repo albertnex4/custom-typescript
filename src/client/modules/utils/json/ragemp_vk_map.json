@@ -1,0 +1,2485 @@
+{
+  "mapped": {
+    "0": {
+      "id": 0,
+      "name": "INPUT_NEXT_CAMERA",
+      "key": "V",
+      "vkName": "VK_V",
+      "vkHex": "0x56"
+    },
+    "1": {
+      "id": 1,
+      "name": "INPUT_LOOK_LR",
+      "key": "Left Mouse Button",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "2": {
+      "id": 2,
+      "name": "INPUT_LOOK_UD",
+      "key": "Right Mouse Button",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "3": {
+      "id": 3,
+      "name": "INPUT_LOOK_UP_ONLY",
+      "key": "Control-Break Processing",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "4": {
+      "id": 4,
+      "name": "INPUT_LOOK_DOWN_ONLY",
+      "key": "Middle Mouse Button",
+      "vkName": "VK_MBUTTON",
+      "vkHex": "0x4"
+    },
+    "6": {
+      "id": 6,
+      "name": "INPUT_LOOK_RIGHT_ONLY",
+      "key": "Right Mouse Button",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "7": {
+      "id": 7,
+      "name": "INPUT_CINEMATIC_SLOWMO",
+      "key": "L",
+      "vkName": "VK_L",
+      "vkHex": "0x4c"
+    },
+    "8": {
+      "id": 8,
+      "name": "INPUT_SCRIPTED_FLY_UD",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "9": {
+      "id": 9,
+      "name": "INPUT_SCRIPTED_FLY_LR",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "10": {
+      "id": 10,
+      "name": "INPUT_SCRIPTED_FLY_ZUP",
+      "key": "PAGE UP",
+      "vkName": "VK_PRIOR",
+      "vkHex": "0x21"
+    },
+    "11": {
+      "id": 11,
+      "name": "INPUT_SCRIPTED_FLY_ZDOWN",
+      "key": "PAGE DOWN",
+      "vkName": "VK_NEXT",
+      "vkHex": "0x22"
+    },
+    "12": {
+      "id": 12,
+      "name": "INPUT_WEAPON_WHEEL_UD",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "13": {
+      "id": 13,
+      "name": "INPUT_WEAPON_WHEEL_LR",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "14": {
+      "id": 14,
+      "name": "INPUT_WEAPON_WHEEL_NEXT",
+      "key": "MOUSE SCROLL WHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "15": {
+      "id": 15,
+      "name": "INPUT_WEAPON_WHEEL_PREV",
+      "key": "MOUSE SCROLL WHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "16": {
+      "id": 16,
+      "name": "INPUT_SELECT_NEXT_WEAPON",
+      "key": "MOUSE SCROLL WHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "17": {
+      "id": 17,
+      "name": "INPUT_SELECT_PREV_WEAPON",
+      "key": "MOUSE SCROLL WHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "18": {
+      "id": 18,
+      "name": "INPUT_SKIP_CUTSCENE",
+      "key": "ENTER / LEFT MOUSE BUTTON / SPACEBAR",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "19": {
+      "id": 19,
+      "name": "INPUT_CHARACTER_WHEEL",
+      "key": "LEFT ALT",
+      "vkName": "VK_LMENU",
+      "vkHex": "0xa4"
+    },
+    "20": {
+      "id": 20,
+      "name": "INPUT_MULTIPLAYER_INFO",
+      "key": "Z",
+      "vkName": "VK_Z",
+      "vkHex": "0x5a"
+    },
+    "21": {
+      "id": 21,
+      "name": "INPUT_SPRINT",
+      "key": "Shift Key",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "22": {
+      "id": 22,
+      "name": "INPUT_JUMP",
+      "key": "Space Key",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "23": {
+      "id": 23,
+      "name": "INPUT_ENTER",
+      "key": "Enter Key",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "24": {
+      "id": 24,
+      "name": "INPUT_ATTACK",
+      "key": "Left Mouse Button",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "25": {
+      "id": 25,
+      "name": "INPUT_AIM",
+      "key": "Right Mouse Button",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "26": {
+      "id": 26,
+      "name": "INPUT_LOOK_BEHIND",
+      "key": "C",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "27": {
+      "id": 27,
+      "name": "INPUT_PHONE",
+      "key": "ARROW UP/SCROLLWHEEL BUTTON (press)",
+      "vkName": "VK_UP",
+      "vkHex": "0x26"
+    },
+    "29": {
+      "id": 29,
+      "name": "INPUT_SPECIAL_ABILITY_SECONDARY",
+      "key": "B",
+      "vkName": "VK_B",
+      "vkHex": "0x42"
+    },
+    "30": {
+      "id": 30,
+      "name": "INPUT_MOVE_LR",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "31": {
+      "id": 31,
+      "name": "INPUT_MOVE_UD",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "32": {
+      "id": 32,
+      "name": "INPUT_MOVE_UP_ONLY",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "33": {
+      "id": 33,
+      "name": "INPUT_MOVE_DOWN_ONLY",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "34": {
+      "id": 34,
+      "name": "INPUT_MOVE_LEFT_ONLY",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "35": {
+      "id": 35,
+      "name": "INPUT_MOVE_RIGHT_ONLY",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "36": {
+      "id": 36,
+      "name": "INPUT_DUCK",
+      "key": "LEFT CONTROL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "37": {
+      "id": 37,
+      "name": "INPUT_SELECT_WEAPON",
+      "key": "TAB",
+      "vkName": "VK_TAB",
+      "vkHex": "0x9"
+    },
+    "38": {
+      "id": 38,
+      "name": "INPUT_PICKUP",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "39": {
+      "id": 39,
+      "name": "INPUT_SNIPER_ZOOM",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "40": {
+      "id": 40,
+      "name": "INPUT_SNIPER_ZOOM_IN_ONLY",
+      "key": "]",
+      "vkName": "VK_OEM_6",
+      "vkHex": "0xdd"
+    },
+    "41": {
+      "id": 41,
+      "name": "INPUT_SNIPER_ZOOM_OUT_ONLY",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "42": {
+      "id": 42,
+      "name": "INPUT_SNIPER_ZOOM_IN_SECONDARY",
+      "key": "]",
+      "vkName": "VK_OEM_6",
+      "vkHex": "0xdd"
+    },
+    "43": {
+      "id": 43,
+      "name": "INPUT_SNIPER_ZOOM_OUT_SECONDARY",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "44": {
+      "id": 44,
+      "name": "INPUT_COVER",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "45": {
+      "id": 45,
+      "name": "INPUT_RELOAD",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "46": {
+      "id": 46,
+      "name": "INPUT_TALK",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "47": {
+      "id": 47,
+      "name": "INPUT_DETONATE",
+      "key": "G",
+      "vkName": "VK_G",
+      "vkHex": "0x47"
+    },
+    "48": {
+      "id": 48,
+      "name": "INPUT_HUD_SPECIAL",
+      "key": "Z",
+      "vkName": "VK_Z",
+      "vkHex": "0x5a"
+    },
+    "49": {
+      "id": 49,
+      "name": "INPUT_ARREST",
+      "key": "F",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "50": {
+      "id": 50,
+      "name": "INPUT_ACCURATE_AIM",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "51": {
+      "id": 51,
+      "name": "INPUT_CONTEXT",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "52": {
+      "id": 52,
+      "name": "INPUT_CONTEXT_SECONDARY",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "54": {
+      "id": 54,
+      "name": "INPUT_WEAPON_SPECIAL_TWO",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "55": {
+      "id": 55,
+      "name": "INPUT_DIVE",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "56": {
+      "id": 56,
+      "name": "INPUT_DROP_WEAPON",
+      "key": "F9",
+      "vkName": "VK_F9",
+      "vkHex": "0x78"
+    },
+    "57": {
+      "id": 57,
+      "name": "INPUT_DROP_AMMO",
+      "key": "F10",
+      "vkName": "VK_F10",
+      "vkHex": "0x79"
+    },
+    "58": {
+      "id": 58,
+      "name": "INPUT_THROW_GRENADE",
+      "key": "G",
+      "vkName": "VK_G",
+      "vkHex": "0x47"
+    },
+    "59": {
+      "id": 59,
+      "name": "INPUT_VEH_MOVE_LR",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "60": {
+      "id": 60,
+      "name": "INPUT_VEH_MOVE_UD",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "61": {
+      "id": 61,
+      "name": "INPUT_VEH_MOVE_UP_ONLY",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "62": {
+      "id": 62,
+      "name": "INPUT_VEH_MOVE_DOWN_ONLY",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "63": {
+      "id": 63,
+      "name": "INPUT_VEH_MOVE_LEFT_ONLY",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "64": {
+      "id": 64,
+      "name": "INPUT_VEH_MOVE_RIGHT_ONLY",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "66": {
+      "id": 66,
+      "name": "INPUT_VEH_GUN_LR",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "67": {
+      "id": 67,
+      "name": "INPUT_VEH_GUN_UD",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "68": {
+      "id": 68,
+      "name": "INPUT_VEH_AIM",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "69": {
+      "id": 69,
+      "name": "INPUT_VEH_ATTACK",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "70": {
+      "id": 70,
+      "name": "INPUT_VEH_ATTACK2",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "71": {
+      "id": 71,
+      "name": "INPUT_VEH_ACCELERATE",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "72": {
+      "id": 72,
+      "name": "INPUT_VEH_BRAKE",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "73": {
+      "id": 73,
+      "name": "INPUT_VEH_DUCK",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "74": {
+      "id": 74,
+      "name": "INPUT_VEH_HEADLIGHT",
+      "key": "H",
+      "vkName": "VK_H",
+      "vkHex": "0x48"
+    },
+    "75": {
+      "id": 75,
+      "name": "INPUT_VEH_EXIT",
+      "key": "F",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "76": {
+      "id": 76,
+      "name": "INPUT_VEH_HANDBRAKE",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "77": {
+      "id": 77,
+      "name": "INPUT_VEH_HOTWIRE_LEFT",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "78": {
+      "id": 78,
+      "name": "INPUT_VEH_HOTWIRE_RIGHT",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "79": {
+      "id": 79,
+      "name": "INPUT_VEH_LOOK_BEHIND",
+      "key": "C",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "80": {
+      "id": 80,
+      "name": "INPUT_VEH_CIN_CAM",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "81": {
+      "id": 81,
+      "name": "INPUT_VEH_NEXT_RADIO",
+      "key": ".",
+      "vkName": "VK_OEM_PERIOD",
+      "vkHex": "0xbe"
+    },
+    "83": {
+      "id": 83,
+      "name": "INPUT_VEH_NEXT_RADIO_TRACK",
+      "key": "=",
+      "vkName": "VK_OEM_PLUS",
+      "vkHex": "0xbb"
+    },
+    "84": {
+      "id": 84,
+      "name": "INPUT_VEH_PREV_RADIO_TRACK",
+      "key": "-",
+      "vkName": "VK_OEM_MINUS",
+      "vkHex": "0xbd"
+    },
+    "85": {
+      "id": 85,
+      "name": "INPUT_VEH_RADIO_WHEEL",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "86": {
+      "id": 86,
+      "name": "INPUT_VEH_HORN",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "87": {
+      "id": 87,
+      "name": "INPUT_VEH_FLY_THROTTLE_UP",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "88": {
+      "id": 88,
+      "name": "INPUT_VEH_FLY_THROTTLE_DOWN",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "89": {
+      "id": 89,
+      "name": "INPUT_VEH_FLY_YAW_LEFT",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "90": {
+      "id": 90,
+      "name": "INPUT_VEH_FLY_YAW_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "91": {
+      "id": 91,
+      "name": "INPUT_VEH_PASSENGER_AIM",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "92": {
+      "id": 92,
+      "name": "INPUT_VEH_PASSENGER_ATTACK",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "95": {
+      "id": 95,
+      "name": "INPUT_VEH_CINEMATIC_UD",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "96": {
+      "id": 96,
+      "name": "INPUT_VEH_CINEMATIC_UP_ONLY",
+      "key": "NUMPAD- / SCROLLWHEEL UP",
+      "vkName": "VK_SUBTRACT",
+      "vkHex": "0x6d"
+    },
+    "97": {
+      "id": 97,
+      "name": "INPUT_VEH_CINEMATIC_DOWN_ONLY",
+      "key": "NUMPAD+ / SCROLLWHEEL DOWN",
+      "vkName": "VK_ADD",
+      "vkHex": "0x6b"
+    },
+    "98": {
+      "id": 98,
+      "name": "INPUT_VEH_CINEMATIC_LR",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "99": {
+      "id": 99,
+      "name": "INPUT_VEH_SELECT_NEXT_WEAPON",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "100": {
+      "id": 100,
+      "name": "INPUT_VEH_SELECT_PREV_WEAPON",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "101": {
+      "id": 101,
+      "name": "INPUT_VEH_ROOF",
+      "key": "H",
+      "vkName": "VK_H",
+      "vkHex": "0x48"
+    },
+    "102": {
+      "id": 102,
+      "name": "INPUT_VEH_JUMP",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "103": {
+      "id": 103,
+      "name": "INPUT_VEH_GRAPPLING_HOOK",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "104": {
+      "id": 104,
+      "name": "INPUT_VEH_SHUFFLE",
+      "key": "H",
+      "vkName": "VK_H",
+      "vkHex": "0x48"
+    },
+    "105": {
+      "id": 105,
+      "name": "INPUT_VEH_DROP_PROJECTILE",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "106": {
+      "id": 106,
+      "name": "INPUT_VEH_MOUSE_CONTROL_OVERRIDE",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "107": {
+      "id": 107,
+      "name": "INPUT_VEH_FLY_ROLL_LR",
+      "key": "NUMPAD 6",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "108": {
+      "id": 108,
+      "name": "INPUT_VEH_FLY_ROLL_LEFT_ONLY",
+      "key": "NUMPAD 4",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "109": {
+      "id": 109,
+      "name": "INPUT_VEH_FLY_ROLL_RIGHT_ONLY",
+      "key": "NUMPAD 6",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "110": {
+      "id": 110,
+      "name": "INPUT_VEH_FLY_PITCH_UD",
+      "key": "NUMPAD 5",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "111": {
+      "id": 111,
+      "name": "INPUT_VEH_FLY_PITCH_UP_ONLY",
+      "key": "NUMPAD 8",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "112": {
+      "id": 112,
+      "name": "INPUT_VEH_FLY_PITCH_DOWN_ONLY",
+      "key": "NUMPAD 5",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "113": {
+      "id": 113,
+      "name": "INPUT_VEH_FLY_UNDERCARRIAGE",
+      "key": "G",
+      "vkName": "VK_G",
+      "vkHex": "0x47"
+    },
+    "114": {
+      "id": 114,
+      "name": "INPUT_VEH_FLY_ATTACK",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "115": {
+      "id": 115,
+      "name": "INPUT_VEH_FLY_SELECT_NEXT_WEAPON",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "116": {
+      "id": 116,
+      "name": "INPUT_VEH_FLY_SELECT_PREV_WEAPON",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "117": {
+      "id": 117,
+      "name": "INPUT_VEH_FLY_SELECT_TARGET_LEFT",
+      "key": "NUMPAD 7",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "118": {
+      "id": 118,
+      "name": "INPUT_VEH_FLY_SELECT_TARGET_RIGHT",
+      "key": "NUMPAD 9",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "119": {
+      "id": 119,
+      "name": "INPUT_VEH_FLY_VERTICAL_FLIGHT_MODE",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "120": {
+      "id": 120,
+      "name": "INPUT_VEH_FLY_DUCK",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "121": {
+      "id": 121,
+      "name": "INPUT_VEH_FLY_ATTACK_CAMERA",
+      "key": "INSERT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "122": {
+      "id": 122,
+      "name": "INPUT_VEH_FLY_MOUSE_CONTROL_OVERRIDE",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "123": {
+      "id": 123,
+      "name": "INPUT_VEH_SUB_TURN_LR",
+      "key": "NUMPAD 6",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "124": {
+      "id": 124,
+      "name": "INPUT_VEH_SUB_TURN_LEFT_ONLY",
+      "key": "NUMPAD 4",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "125": {
+      "id": 125,
+      "name": "INPUT_VEH_SUB_TURN_RIGHT_ONLY",
+      "key": "NUMPAD 6",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "126": {
+      "id": 126,
+      "name": "INPUT_VEH_SUB_PITCH_UD",
+      "key": "NUMPAD 5",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "127": {
+      "id": 127,
+      "name": "INPUT_VEH_SUB_PITCH_UP_ONLY",
+      "key": "NUMPAD 8",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "128": {
+      "id": 128,
+      "name": "INPUT_VEH_SUB_PITCH_DOWN_ONLY",
+      "key": "NUMPAD 5",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "129": {
+      "id": 129,
+      "name": "INPUT_VEH_SUB_THROTTLE_UP",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "130": {
+      "id": 130,
+      "name": "INPUT_VEH_SUB_THROTTLE_DOWN",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "131": {
+      "id": 131,
+      "name": "INPUT_VEH_SUB_ASCEND",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "132": {
+      "id": 132,
+      "name": "INPUT_VEH_SUB_DESCEND",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "133": {
+      "id": 133,
+      "name": "INPUT_VEH_SUB_TURN_HARD_LEFT",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "134": {
+      "id": 134,
+      "name": "INPUT_VEH_SUB_TURN_HARD_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "135": {
+      "id": 135,
+      "name": "INPUT_VEH_SUB_MOUSE_CONTROL_OVERRIDE",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "136": {
+      "id": 136,
+      "name": "INPUT_VEH_PUSHBIKE_PEDAL",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "137": {
+      "id": 137,
+      "name": "INPUT_VEH_PUSHBIKE_SPRINT",
+      "key": "CAPSLOCK",
+      "vkName": "VK_CAPITAL",
+      "vkHex": "0x14"
+    },
+    "138": {
+      "id": 138,
+      "name": "INPUT_VEH_PUSHBIKE_FRONT_BRAKE",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "139": {
+      "id": 139,
+      "name": "INPUT_VEH_PUSHBIKE_REAR_BRAKE",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "140": {
+      "id": 140,
+      "name": "INPUT_MELEE_ATTACK_LIGHT",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "141": {
+      "id": 141,
+      "name": "INPUT_MELEE_ATTACK_HEAVY",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "142": {
+      "id": 142,
+      "name": "INPUT_MELEE_ATTACK_ALTERNATE",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "143": {
+      "id": 143,
+      "name": "INPUT_MELEE_BLOCK",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "144": {
+      "id": 144,
+      "name": "INPUT_PARACHUTE_DEPLOY",
+      "key": "F / LEFT MOUSE BUTTON",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "145": {
+      "id": 145,
+      "name": "INPUT_PARACHUTE_DETACH",
+      "key": "F",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "146": {
+      "id": 146,
+      "name": "INPUT_PARACHUTE_TURN_LR",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "147": {
+      "id": 147,
+      "name": "INPUT_PARACHUTE_TURN_LEFT_ONLY",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "148": {
+      "id": 148,
+      "name": "INPUT_PARACHUTE_TURN_RIGHT_ONLY",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "149": {
+      "id": 149,
+      "name": "INPUT_PARACHUTE_PITCH_UD",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "150": {
+      "id": 150,
+      "name": "INPUT_PARACHUTE_PITCH_UP_ONLY",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "151": {
+      "id": 151,
+      "name": "INPUT_PARACHUTE_PITCH_DOWN_ONLY",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "152": {
+      "id": 152,
+      "name": "INPUT_PARACHUTE_BRAKE_LEFT",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "153": {
+      "id": 153,
+      "name": "INPUT_PARACHUTE_BRAKE_RIGHT",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "154": {
+      "id": 154,
+      "name": "INPUT_PARACHUTE_SMOKE",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "155": {
+      "id": 155,
+      "name": "INPUT_PARACHUTE_PRECISION_LANDING",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "157": {
+      "id": 157,
+      "name": "INPUT_SELECT_WEAPON_UNARMED",
+      "key": "1",
+      "vkName": "VK_1",
+      "vkHex": "0x31"
+    },
+    "158": {
+      "id": 158,
+      "name": "INPUT_SELECT_WEAPON_MELEE",
+      "key": "2",
+      "vkName": "VK_2",
+      "vkHex": "0x32"
+    },
+    "159": {
+      "id": 159,
+      "name": "INPUT_SELECT_WEAPON_HANDGUN",
+      "key": "6",
+      "vkName": "VK_6",
+      "vkHex": "0x36"
+    },
+    "160": {
+      "id": 160,
+      "name": "INPUT_SELECT_WEAPON_SHOTGUN",
+      "key": "3",
+      "vkName": "VK_3",
+      "vkHex": "0x33"
+    },
+    "161": {
+      "id": 161,
+      "name": "INPUT_SELECT_WEAPON_SMG",
+      "key": "7",
+      "vkName": "VK_7",
+      "vkHex": "0x37"
+    },
+    "162": {
+      "id": 162,
+      "name": "INPUT_SELECT_WEAPON_AUTO_RIFLE",
+      "key": "8",
+      "vkName": "VK_8",
+      "vkHex": "0x38"
+    },
+    "163": {
+      "id": 163,
+      "name": "INPUT_SELECT_WEAPON_SNIPER",
+      "key": "9",
+      "vkName": "VK_9",
+      "vkHex": "0x39"
+    },
+    "164": {
+      "id": 164,
+      "name": "INPUT_SELECT_WEAPON_HEAVY",
+      "key": "4",
+      "vkName": "VK_4",
+      "vkHex": "0x34"
+    },
+    "165": {
+      "id": 165,
+      "name": "INPUT_SELECT_WEAPON_SPECIAL",
+      "key": "5",
+      "vkName": "VK_5",
+      "vkHex": "0x35"
+    },
+    "166": {
+      "id": 166,
+      "name": "INPUT_SELECT_CHARACTER_MICHAEL",
+      "key": "F5",
+      "vkName": "VK_F5",
+      "vkHex": "0x74"
+    },
+    "167": {
+      "id": 167,
+      "name": "INPUT_SELECT_CHARACTER_FRANKLIN",
+      "key": "F6",
+      "vkName": "VK_F6",
+      "vkHex": "0x75"
+    },
+    "168": {
+      "id": 168,
+      "name": "INPUT_SELECT_CHARACTER_TREVOR",
+      "key": "F7",
+      "vkName": "VK_F7",
+      "vkHex": "0x76"
+    },
+    "169": {
+      "id": 169,
+      "name": "INPUT_SELECT_CHARACTER_MULTIPLAYER",
+      "key": "F8",
+      "vkName": "VK_F8",
+      "vkHex": "0x77"
+    },
+    "170": {
+      "id": 170,
+      "name": "INPUT_SAVE_REPLAY_CLIP",
+      "key": "F3",
+      "vkName": "VK_F3",
+      "vkHex": "0x72"
+    },
+    "171": {
+      "id": 171,
+      "name": "INPUT_SPECIAL_ABILITY_PC",
+      "key": "CAPSLOCK",
+      "vkName": "VK_CAPITAL",
+      "vkHex": "0x14"
+    },
+    "172": {
+      "id": 172,
+      "name": "INPUT_CELLPHONE_UP",
+      "key": "ARROW UP",
+      "vkName": "VK_UP",
+      "vkHex": "0x26"
+    },
+    "173": {
+      "id": 173,
+      "name": "INPUT_CELLPHONE_DOWN",
+      "key": "ARROW DOWN",
+      "vkName": "VK_DOWN",
+      "vkHex": "0x28"
+    },
+    "174": {
+      "id": 174,
+      "name": "INPUT_CELLPHONE_LEFT",
+      "key": "ARROW LEFT",
+      "vkName": "VK_LEFT",
+      "vkHex": "0x25"
+    },
+    "175": {
+      "id": 175,
+      "name": "INPUT_CELLPHONE_RIGHT",
+      "key": "ARROW RIGHT",
+      "vkName": "VK_RIGHT",
+      "vkHex": "0x27"
+    },
+    "176": {
+      "id": 176,
+      "name": "INPUT_CELLPHONE_SELECT",
+      "key": "ENTER/LEFT MOUSE BUTTON",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "177": {
+      "id": 177,
+      "name": "INPUT_CELLPHONE_CANCEL",
+      "key": "BACKSPACE/ESC/RIGHT MOUSE BUTTON",
+      "vkName": "VK_BACK",
+      "vkHex": "0x8"
+    },
+    "178": {
+      "id": 178,
+      "name": "INPUT_CELLPHONE_OPTION",
+      "key": "DELETE",
+      "vkName": "VK_DELETE",
+      "vkHex": "0x2e"
+    },
+    "179": {
+      "id": 179,
+      "name": "INPUT_CELLPHONE_EXTRA_OPTION",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "180": {
+      "id": 180,
+      "name": "INPUT_CELLPHONE_SCROLL_FORWARD",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "181": {
+      "id": 181,
+      "name": "INPUT_CELLPHONE_SCROLL_BACKWARD",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "182": {
+      "id": 182,
+      "name": "INPUT_CELLPHONE_CAMERA_FOCUS_LOCK",
+      "key": "L",
+      "vkName": "VK_L",
+      "vkHex": "0x4c"
+    },
+    "183": {
+      "id": 183,
+      "name": "INPUT_CELLPHONE_CAMERA_GRID",
+      "key": "G",
+      "vkName": "VK_G",
+      "vkHex": "0x47"
+    },
+    "184": {
+      "id": 184,
+      "name": "INPUT_CELLPHONE_CAMERA_SELFIE",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "185": {
+      "id": 185,
+      "name": "INPUT_CELLPHONE_CAMERA_DOF",
+      "key": "F",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "186": {
+      "id": 186,
+      "name": "INPUT_CELLPHONE_CAMERA_EXPRESSION",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "187": {
+      "id": 187,
+      "name": "INPUT_FRONTEND_DOWN",
+      "key": "ARROW DOWN",
+      "vkName": "VK_DOWN",
+      "vkHex": "0x28"
+    },
+    "188": {
+      "id": 188,
+      "name": "INPUT_FRONTEND_UP",
+      "key": "ARROW UP",
+      "vkName": "VK_UP",
+      "vkHex": "0x26"
+    },
+    "189": {
+      "id": 189,
+      "name": "INPUT_FRONTEND_LEFT",
+      "key": "ARROW LEFT",
+      "vkName": "VK_LEFT",
+      "vkHex": "0x25"
+    },
+    "190": {
+      "id": 190,
+      "name": "INPUT_FRONTEND_RIGHT",
+      "key": "ARROW RIGHT",
+      "vkName": "VK_RIGHT",
+      "vkHex": "0x27"
+    },
+    "191": {
+      "id": 191,
+      "name": "INPUT_FRONTEND_RDOWN",
+      "key": "ENTER",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "192": {
+      "id": 192,
+      "name": "INPUT_FRONTEND_RUP",
+      "key": "TAB",
+      "vkName": "VK_TAB",
+      "vkHex": "0x9"
+    },
+    "194": {
+      "id": 194,
+      "name": "INPUT_FRONTEND_RRIGHT",
+      "key": "BACKSPACE",
+      "vkName": "VK_BACK",
+      "vkHex": "0x8"
+    },
+    "195": {
+      "id": 195,
+      "name": "INPUT_FRONTEND_AXIS_X",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "196": {
+      "id": 196,
+      "name": "INPUT_FRONTEND_AXIS_Y",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "197": {
+      "id": 197,
+      "name": "INPUT_FRONTEND_RIGHT_AXIS_X",
+      "key": "]",
+      "vkName": "VK_OEM_6",
+      "vkHex": "0xdd"
+    },
+    "198": {
+      "id": 198,
+      "name": "INPUT_FRONTEND_RIGHT_AXIS_Y",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "199": {
+      "id": 199,
+      "name": "INPUT_FRONTEND_PAUSE",
+      "key": "P",
+      "vkName": "VK_P",
+      "vkHex": "0x50"
+    },
+    "200": {
+      "id": 200,
+      "name": "INPUT_FRONTEND_PAUSE_ALTERNATE",
+      "key": "ESC",
+      "vkName": "VK_ESCAPE",
+      "vkHex": "0x1b"
+    },
+    "201": {
+      "id": 201,
+      "name": "INPUT_FRONTEND_ACCEPT",
+      "key": "ENTER/NUMPAD ENTER",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "202": {
+      "id": 202,
+      "name": "INPUT_FRONTEND_CANCEL",
+      "key": "BACKSPACE/ESC",
+      "vkName": "VK_BACK",
+      "vkHex": "0x8"
+    },
+    "203": {
+      "id": 203,
+      "name": "INPUT_FRONTEND_X",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "204": {
+      "id": 204,
+      "name": "INPUT_FRONTEND_Y",
+      "key": "TAB",
+      "vkName": "VK_TAB",
+      "vkHex": "0x9"
+    },
+    "205": {
+      "id": 205,
+      "name": "INPUT_FRONTEND_LB",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "206": {
+      "id": 206,
+      "name": "INPUT_FRONTEND_RB",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "207": {
+      "id": 207,
+      "name": "INPUT_FRONTEND_LT",
+      "key": "PAGE DOWN",
+      "vkName": "VK_NEXT",
+      "vkHex": "0x22"
+    },
+    "208": {
+      "id": 208,
+      "name": "INPUT_FRONTEND_RT",
+      "key": "PAGE UP",
+      "vkName": "VK_PRIOR",
+      "vkHex": "0x21"
+    },
+    "209": {
+      "id": 209,
+      "name": "INPUT_FRONTEND_LS",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "210": {
+      "id": 210,
+      "name": "INPUT_FRONTEND_RS",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "211": {
+      "id": 211,
+      "name": "INPUT_FRONTEND_LEADERBOARD",
+      "key": "TAB",
+      "vkName": "VK_TAB",
+      "vkHex": "0x9"
+    },
+    "212": {
+      "id": 212,
+      "name": "INPUT_FRONTEND_SOCIAL_CLUB",
+      "key": "HOME",
+      "vkName": "VK_HOME",
+      "vkHex": "0x24"
+    },
+    "213": {
+      "id": 213,
+      "name": "INPUT_FRONTEND_SOCIAL_CLUB_SECONDARY",
+      "key": "HOME",
+      "vkName": "VK_HOME",
+      "vkHex": "0x24"
+    },
+    "214": {
+      "id": 214,
+      "name": "INPUT_FRONTEND_DELETE",
+      "key": "DELETE",
+      "vkName": "VK_DELETE",
+      "vkHex": "0x2e"
+    },
+    "215": {
+      "id": 215,
+      "name": "INPUT_FRONTEND_ENDSCREEN_ACCEPT",
+      "key": "ENTER",
+      "vkName": "VK_RETURN",
+      "vkHex": "0xd"
+    },
+    "216": {
+      "id": 216,
+      "name": "INPUT_FRONTEND_ENDSCREEN_EXPAND",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "217": {
+      "id": 217,
+      "name": "INPUT_FRONTEND_SELECT",
+      "key": "CAPSLOCK",
+      "vkName": "VK_CAPITAL",
+      "vkHex": "0x14"
+    },
+    "218": {
+      "id": 218,
+      "name": "INPUT_SCRIPT_LEFT_AXIS_X",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "219": {
+      "id": 219,
+      "name": "INPUT_SCRIPT_LEFT_AXIS_Y",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "220": {
+      "id": 220,
+      "name": "INPUT_SCRIPT_RIGHT_AXIS_X",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "221": {
+      "id": 221,
+      "name": "INPUT_SCRIPT_RIGHT_AXIS_Y",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "222": {
+      "id": 222,
+      "name": "INPUT_SCRIPT_RUP",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "223": {
+      "id": 223,
+      "name": "INPUT_SCRIPT_RDOWN",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "224": {
+      "id": 224,
+      "name": "INPUT_SCRIPT_RLEFT",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "225": {
+      "id": 225,
+      "name": "INPUT_SCRIPT_RRIGHT",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "229": {
+      "id": 229,
+      "name": "INPUT_SCRIPT_RT",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "232": {
+      "id": 232,
+      "name": "INPUT_SCRIPT_PAD_UP",
+      "key": "W",
+      "vkName": "VK_W",
+      "vkHex": "0x57"
+    },
+    "233": {
+      "id": 233,
+      "name": "INPUT_SCRIPT_PAD_DOWN",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "234": {
+      "id": 234,
+      "name": "INPUT_SCRIPT_PAD_LEFT",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "235": {
+      "id": 235,
+      "name": "INPUT_SCRIPT_PAD_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "236": {
+      "id": 236,
+      "name": "INPUT_SCRIPT_SELECT",
+      "key": "V",
+      "vkName": "VK_V",
+      "vkHex": "0x56"
+    },
+    "237": {
+      "id": 237,
+      "name": "INPUT_CURSOR_ACCEPT",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "238": {
+      "id": 238,
+      "name": "INPUT_CURSOR_CANCEL",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "241": {
+      "id": 241,
+      "name": "INPUT_CURSOR_SCROLL_UP",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "242": {
+      "id": 242,
+      "name": "INPUT_CURSOR_SCROLL_DOWN",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "243": {
+      "id": 243,
+      "name": "INPUT_ENTER_CHEAT_CODE",
+      "key": "~ / `",
+      "vkName": "VK_OEM_3",
+      "vkHex": "0xc0"
+    },
+    "244": {
+      "id": 244,
+      "name": "INPUT_INTERACTION_MENU",
+      "key": "M",
+      "vkName": "VK_M",
+      "vkHex": "0x4d"
+    },
+    "245": {
+      "id": 245,
+      "name": "INPUT_MP_TEXT_CHAT_ALL",
+      "key": "T",
+      "vkName": "VK_T",
+      "vkHex": "0x54"
+    },
+    "246": {
+      "id": 246,
+      "name": "INPUT_MP_TEXT_CHAT_TEAM",
+      "key": "Y",
+      "vkName": "VK_Y",
+      "vkHex": "0x59"
+    },
+    "249": {
+      "id": 249,
+      "name": "INPUT_PUSH_TO_TALK",
+      "key": "N",
+      "vkName": "VK_N",
+      "vkHex": "0x4e"
+    },
+    "250": {
+      "id": 250,
+      "name": "INPUT_CREATOR_LS",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "251": {
+      "id": 251,
+      "name": "INPUT_CREATOR_RS",
+      "key": "F",
+      "vkName": "VK_F",
+      "vkHex": "0x46"
+    },
+    "252": {
+      "id": 252,
+      "name": "INPUT_CREATOR_LT",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "253": {
+      "id": 253,
+      "name": "INPUT_CREATOR_RT",
+      "key": "C",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "254": {
+      "id": 254,
+      "name": "INPUT_CREATOR_MENU_TOGGLE",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "255": {
+      "id": 255,
+      "name": "INPUT_CREATOR_ACCEPT",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "256": {
+      "id": 256,
+      "name": "INPUT_CREATOR_DELETE",
+      "key": "DELETE",
+      "vkName": "VK_DELETE",
+      "vkHex": "0x2e"
+    },
+    "257": {
+      "id": 257,
+      "name": "INPUT_ATTACK2",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "261": {
+      "id": 261,
+      "name": "INPUT_PREV_WEAPON",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "262": {
+      "id": 262,
+      "name": "INPUT_NEXT_WEAPON",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "263": {
+      "id": 263,
+      "name": "INPUT_MELEE_ATTACK1",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "264": {
+      "id": 264,
+      "name": "INPUT_MELEE_ATTACK2",
+      "key": "Q",
+      "vkName": "VK_Q",
+      "vkHex": "0x51"
+    },
+    "266": {
+      "id": 266,
+      "name": "INPUT_MOVE_LEFT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "267": {
+      "id": 267,
+      "name": "INPUT_MOVE_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "268": {
+      "id": 268,
+      "name": "INPUT_MOVE_UP",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "269": {
+      "id": 269,
+      "name": "INPUT_MOVE_DOWN",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "270": {
+      "id": 270,
+      "name": "INPUT_LOOK_LEFT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "271": {
+      "id": 271,
+      "name": "INPUT_LOOK_RIGHT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "272": {
+      "id": 272,
+      "name": "INPUT_LOOK_UP",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "273": {
+      "id": 273,
+      "name": "INPUT_LOOK_DOWN",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "274": {
+      "id": 274,
+      "name": "INPUT_SNIPER_ZOOM_IN",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "275": {
+      "id": 275,
+      "name": "INPUT_SNIPER_ZOOM_OUT",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "276": {
+      "id": 276,
+      "name": "INPUT_SNIPER_ZOOM_IN_ALTERNATE",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "277": {
+      "id": 277,
+      "name": "INPUT_SNIPER_ZOOM_OUT_ALTERNATE",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "278": {
+      "id": 278,
+      "name": "INPUT_VEH_MOVE_LEFT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "279": {
+      "id": 279,
+      "name": "INPUT_VEH_MOVE_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "280": {
+      "id": 280,
+      "name": "INPUT_VEH_MOVE_UP",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "281": {
+      "id": 281,
+      "name": "INPUT_VEH_MOVE_DOWN",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "282": {
+      "id": 282,
+      "name": "INPUT_VEH_GUN_LEFT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "283": {
+      "id": 283,
+      "name": "INPUT_VEH_GUN_RIGHT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "284": {
+      "id": 284,
+      "name": "INPUT_VEH_GUN_UP",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "285": {
+      "id": 285,
+      "name": "INPUT_VEH_GUN_DOWN",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "286": {
+      "id": 286,
+      "name": "INPUT_VEH_LOOK_LEFT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "287": {
+      "id": 287,
+      "name": "INPUT_VEH_LOOK_RIGHT",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "288": {
+      "id": 288,
+      "name": "INPUT_REPLAY_START_STOP_RECORDING",
+      "key": "F1",
+      "vkName": "VK_F1",
+      "vkHex": "0x70"
+    },
+    "289": {
+      "id": 289,
+      "name": "INPUT_REPLAY_START_STOP_RECORDING_SECONDARY",
+      "key": "F2",
+      "vkName": "VK_F2",
+      "vkHex": "0x71"
+    },
+    "290": {
+      "id": 290,
+      "name": "INPUT_SCALED_LOOK_LR",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "291": {
+      "id": 291,
+      "name": "INPUT_SCALED_LOOK_UD",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "296": {
+      "id": 296,
+      "name": "INPUT_REPLAY_MARKER_DELETE",
+      "key": "DELETE",
+      "vkName": "VK_DELETE",
+      "vkHex": "0x2e"
+    },
+    "297": {
+      "id": 297,
+      "name": "INPUT_REPLAY_CLIP_DELETE",
+      "key": "DELETE",
+      "vkName": "VK_DELETE",
+      "vkHex": "0x2e"
+    },
+    "298": {
+      "id": 298,
+      "name": "INPUT_REPLAY_PAUSE",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "299": {
+      "id": 299,
+      "name": "INPUT_REPLAY_REWIND",
+      "key": "ARROW DOWN",
+      "vkName": "VK_DOWN",
+      "vkHex": "0x28"
+    },
+    "300": {
+      "id": 300,
+      "name": "INPUT_REPLAY_FFWD",
+      "key": "ARROW UP",
+      "vkName": "VK_UP",
+      "vkHex": "0x26"
+    },
+    "301": {
+      "id": 301,
+      "name": "INPUT_REPLAY_NEWMARKER",
+      "key": "M",
+      "vkName": "VK_M",
+      "vkHex": "0x4d"
+    },
+    "302": {
+      "id": 302,
+      "name": "INPUT_REPLAY_RECORD",
+      "key": "S",
+      "vkName": "VK_S",
+      "vkHex": "0x53"
+    },
+    "303": {
+      "id": 303,
+      "name": "INPUT_REPLAY_SCREENSHOT",
+      "key": "U",
+      "vkName": "VK_U",
+      "vkHex": "0x55"
+    },
+    "304": {
+      "id": 304,
+      "name": "INPUT_REPLAY_HIDEHUD",
+      "key": "H",
+      "vkName": "VK_H",
+      "vkHex": "0x48"
+    },
+    "305": {
+      "id": 305,
+      "name": "INPUT_REPLAY_STARTPOINT",
+      "key": "B",
+      "vkName": "VK_B",
+      "vkHex": "0x42"
+    },
+    "306": {
+      "id": 306,
+      "name": "INPUT_REPLAY_ENDPOINT",
+      "key": "N",
+      "vkName": "VK_N",
+      "vkHex": "0x4e"
+    },
+    "307": {
+      "id": 307,
+      "name": "INPUT_REPLAY_ADVANCE",
+      "key": "ARROW RIGHT",
+      "vkName": "VK_RIGHT",
+      "vkHex": "0x27"
+    },
+    "308": {
+      "id": 308,
+      "name": "INPUT_REPLAY_BACK",
+      "key": "ARROW LEFT",
+      "vkName": "VK_LEFT",
+      "vkHex": "0x25"
+    },
+    "309": {
+      "id": 309,
+      "name": "INPUT_REPLAY_TOOLS",
+      "key": "T",
+      "vkName": "VK_T",
+      "vkHex": "0x54"
+    },
+    "310": {
+      "id": 310,
+      "name": "INPUT_REPLAY_RESTART",
+      "key": "R",
+      "vkName": "VK_R",
+      "vkHex": "0x52"
+    },
+    "311": {
+      "id": 311,
+      "name": "INPUT_REPLAY_SHOWHOTKEY",
+      "key": "K",
+      "vkName": "VK_K",
+      "vkHex": "0x4b"
+    },
+    "312": {
+      "id": 312,
+      "name": "INPUT_REPLAY_CYCLEMARKERLEFT",
+      "key": "[",
+      "vkName": "VK_OEM_4",
+      "vkHex": "0xdb"
+    },
+    "313": {
+      "id": 313,
+      "name": "INPUT_REPLAY_CYCLEMARKERRIGHT",
+      "key": "]",
+      "vkName": "VK_OEM_6",
+      "vkHex": "0xdd"
+    },
+    "314": {
+      "id": 314,
+      "name": "INPUT_REPLAY_FOVINCREASE",
+      "key": "NUMPAD+",
+      "vkName": "VK_ADD",
+      "vkHex": "0x6b"
+    },
+    "315": {
+      "id": 315,
+      "name": "INPUT_REPLAY_FOVDECREASE",
+      "key": "NUMPAD-",
+      "vkName": "VK_SUBTRACT",
+      "vkHex": "0x6d"
+    },
+    "316": {
+      "id": 316,
+      "name": "INPUT_REPLAY_CAMERAUP",
+      "key": "PAGE UP",
+      "vkName": "VK_PRIOR",
+      "vkHex": "0x21"
+    },
+    "317": {
+      "id": 317,
+      "name": "INPUT_REPLAY_CAMERADOWN",
+      "key": "PAGE DOWN",
+      "vkName": "VK_NEXT",
+      "vkHex": "0x22"
+    },
+    "318": {
+      "id": 318,
+      "name": "INPUT_REPLAY_SAVE",
+      "key": "F5",
+      "vkName": "VK_F5",
+      "vkHex": "0x74"
+    },
+    "319": {
+      "id": 319,
+      "name": "INPUT_REPLAY_TOGGLETIME",
+      "key": "C",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "320": {
+      "id": 320,
+      "name": "INPUT_REPLAY_TOGGLETIPS",
+      "key": "V",
+      "vkName": "VK_V",
+      "vkHex": "0x56"
+    },
+    "321": {
+      "id": 321,
+      "name": "INPUT_REPLAY_PREVIEW",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "322": {
+      "id": 322,
+      "name": "INPUT_REPLAY_TOGGLE_TIMELINE",
+      "key": "ESC",
+      "vkName": "VK_ESCAPE",
+      "vkHex": "0x1b"
+    },
+    "323": {
+      "id": 323,
+      "name": "INPUT_REPLAY_TIMELINE_PICKUP_CLIP",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "324": {
+      "id": 324,
+      "name": "INPUT_REPLAY_TIMELINE_DUPLICATE_CLIP",
+      "key": "C",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "325": {
+      "id": 325,
+      "name": "INPUT_REPLAY_TIMELINE_PLACE_CLIP",
+      "key": "V",
+      "vkName": "VK_V",
+      "vkHex": "0x56"
+    },
+    "326": {
+      "id": 326,
+      "name": "INPUT_REPLAY_CTRL",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "327": {
+      "id": 327,
+      "name": "INPUT_REPLAY_TIMELINE_SAVE",
+      "key": "F5",
+      "vkName": "VK_F5",
+      "vkHex": "0x74"
+    },
+    "328": {
+      "id": 328,
+      "name": "INPUT_REPLAY_PREVIEW_AUDIO",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "329": {
+      "id": 329,
+      "name": "INPUT_VEH_DRIVE_LOOK",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "330": {
+      "id": 330,
+      "name": "INPUT_VEH_DRIVE_LOOK2",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "331": {
+      "id": 331,
+      "name": "INPUT_VEH_FLY_ATTACK2",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "332": {
+      "id": 332,
+      "name": "INPUT_RADIO_WHEEL_UD",
+      "key": "MOUSE DOWN",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "333": {
+      "id": 333,
+      "name": "INPUT_RADIO_WHEEL_LR",
+      "key": "MOUSE RIGHT",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "334": {
+      "id": 334,
+      "name": "INPUT_VEH_SLOWMO_UD",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "335": {
+      "id": 335,
+      "name": "INPUT_VEH_SLOWMO_UP_ONLY",
+      "key": "SCROLLWHEEL UP",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "336": {
+      "id": 336,
+      "name": "INPUT_VEH_SLOWMO_DOWN_ONLY",
+      "key": "SCROLLWHEEL DOWN",
+      "vkName": "VK_C",
+      "vkHex": "0x43"
+    },
+    "337": {
+      "id": 337,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_TOGGLE",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "338": {
+      "id": 338,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_LEFT",
+      "key": "A",
+      "vkName": "VK_A",
+      "vkHex": "0x41"
+    },
+    "339": {
+      "id": 339,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_RIGHT",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "340": {
+      "id": 340,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_UP",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "341": {
+      "id": 341,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_DOWN",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "342": {
+      "id": 342,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_LR",
+      "key": "D",
+      "vkName": "VK_D",
+      "vkHex": "0x44"
+    },
+    "343": {
+      "id": 343,
+      "name": "INPUT_VEH_HYDRAULICS_CONTROL_UD",
+      "key": "LEFT CTRL",
+      "vkName": "VK_LCONTROL",
+      "vkHex": "0xa2"
+    },
+    "344": {
+      "id": 344,
+      "name": "INPUT_SWITCH_VISOR",
+      "key": "F11",
+      "vkName": "VK_F11",
+      "vkHex": "0x7a"
+    },
+    "345": {
+      "id": 345,
+      "name": "INPUT_VEH_MELEE_HOLD",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "346": {
+      "id": 346,
+      "name": "INPUT_VEH_MELEE_LEFT",
+      "key": "LEFT MOUSE BUTTON",
+      "vkName": "VK_LBUTTON",
+      "vkHex": "0x1"
+    },
+    "347": {
+      "id": 347,
+      "name": "INPUT_VEH_MELEE_RIGHT",
+      "key": "RIGHT MOUSE BUTTON",
+      "vkName": "VK_RBUTTON",
+      "vkHex": "0x2"
+    },
+    "348": {
+      "id": 348,
+      "name": "INPUT_MAP_POI",
+      "key": "SCROLLWHEEL BUTTON (PRESS)",
+      "vkName": "VK_B",
+      "vkHex": "0x42"
+    },
+    "349": {
+      "id": 349,
+      "name": "INPUT_REPLAY_SNAPMATIC_PHOTO",
+      "key": "TAB",
+      "vkName": "VK_TAB",
+      "vkHex": "0x9"
+    },
+    "350": {
+      "id": 350,
+      "name": "INPUT_VEH_CAR_JUMP",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "351": {
+      "id": 351,
+      "name": "INPUT_VEH_ROCKET_BOOST",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "352": {
+      "id": 352,
+      "name": "INPUT_VEH_FLY_BOOST",
+      "key": "LEFT SHIFT",
+      "vkName": "VK_LSHIFT",
+      "vkHex": "0xa0"
+    },
+    "353": {
+      "id": 353,
+      "name": "INPUT_VEH_PARACHUTE",
+      "key": "SPACEBAR",
+      "vkName": "VK_SPACE",
+      "vkHex": "0x20"
+    },
+    "354": {
+      "id": 354,
+      "name": "INPUT_VEH_BIKE_WINGS",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    },
+    "355": {
+      "id": 355,
+      "name": "INPUT_VEH_FLY_BOMB_BAY",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "356": {
+      "id": 356,
+      "name": "INPUT_VEH_FLY_COUNTER",
+      "key": "E",
+      "vkName": "VK_E",
+      "vkHex": "0x45"
+    },
+    "357": {
+      "id": 357,
+      "name": "INPUT_VEH_TRANSFORM",
+      "key": "X",
+      "vkName": "VK_X",
+      "vkHex": "0x58"
+    }
+  },
+  "unmapped": {
+    "5": {
+      "id": 5,
+      "name": "INPUT_LOOK_LEFT_ONLY",
+      "key": ""
+    },
+    "28": {
+      "id": 28,
+      "name": "INPUT_SPECIAL_ABILITY",
+      "key": ""
+    },
+    "53": {
+      "id": 53,
+      "name": "INPUT_WEAPON_SPECIAL",
+      "key": ""
+    },
+    "65": {
+      "id": 65,
+      "name": "INPUT_VEH_SPECIAL",
+      "key": ""
+    },
+    "82": {
+      "id": 82,
+      "name": "INPUT_VEH_PREV_RADIO",
+      "key": ","
+    },
+    "93": {
+      "id": 93,
+      "name": "INPUT_VEH_SPECIAL_ABILITY_FRANKLIN",
+      "key": ""
+    },
+    "94": {
+      "id": 94,
+      "name": "INPUT_VEH_STUNT_UD",
+      "key": ""
+    },
+    "156": {
+      "id": 156,
+      "name": "INPUT_MAP",
+      "key": ""
+    },
+    "193": {
+      "id": 193,
+      "name": "INPUT_FRONTEND_RLEFT",
+      "key": ""
+    },
+    "226": {
+      "id": 226,
+      "name": "INPUT_SCRIPT_LB",
+      "key": ""
+    },
+    "227": {
+      "id": 227,
+      "name": "INPUT_SCRIPT_RB",
+      "key": ""
+    },
+    "228": {
+      "id": 228,
+      "name": "INPUT_SCRIPT_LT",
+      "key": ""
+    },
+    "230": {
+      "id": 230,
+      "name": "INPUT_SCRIPT_LS",
+      "key": ""
+    },
+    "231": {
+      "id": 231,
+      "name": "INPUT_SCRIPT_RS",
+      "key": ""
+    },
+    "239": {
+      "id": 239,
+      "name": "INPUT_CURSOR_X",
+      "key": ""
+    },
+    "240": {
+      "id": 240,
+      "name": "INPUT_CURSOR_Y",
+      "key": ""
+    },
+    "247": {
+      "id": 247,
+      "name": "INPUT_MP_TEXT_CHAT_FRIENDS",
+      "key": ""
+    },
+    "248": {
+      "id": 248,
+      "name": "INPUT_MP_TEXT_CHAT_CREW",
+      "key": ""
+    },
+    "258": {
+      "id": 258,
+      "name": "INPUT_RAPPEL_JUMP",
+      "key": ""
+    },
+    "259": {
+      "id": 259,
+      "name": "INPUT_RAPPEL_LONG_JUMP",
+      "key": ""
+    },
+    "260": {
+      "id": 260,
+      "name": "INPUT_RAPPEL_SMASH_WINDOW",
+      "key": ""
+    },
+    "265": {
+      "id": 265,
+      "name": "INPUT_WHISTLE",
+      "key": ""
+    },
+    "292": {
+      "id": 292,
+      "name": "INPUT_SCALED_LOOK_UP_ONLY",
+      "key": ""
+    },
+    "293": {
+      "id": 293,
+      "name": "INPUT_SCALED_LOOK_DOWN_ONLY",
+      "key": ""
+    },
+    "294": {
+      "id": 294,
+      "name": "INPUT_SCALED_LOOK_LEFT_ONLY",
+      "key": ""
+    },
+    "295": {
+      "id": 295,
+      "name": "INPUT_SCALED_LOOK_RIGHT_ONLY",
+      "key": ""
+    },
+    "358": {
+      "id": 358,
+      "name": "INPUT_QUAD_LOCO_REVERSE",
+      "key": ""
+    },
+    "359": {
+      "id": 359,
+      "name": "INPUT_RESPAWN_FASTER",
+      "key": ""
+    },
+    "360": {
+      "id": 360,
+      "name": "INPUT_HUDMARKER_SELECT",
+      "key": ""
+    },
+    "361": {
+      "id": 361,
+      "name": "INPUT_EAT_SNACK",
+      "key": ""
+    },
+    "362": {
+      "id": 362,
+      "name": "INPUT_USE_ARMOR",
+      "key": ""
+    }
+  }
+}

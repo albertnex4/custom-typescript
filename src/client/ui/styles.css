@@ -1,14 +1,11 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-  text-align: end;
-}
-
 .app-container {
   opacity: 1;
-  transform: scale(1);
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.problems {
   will-change: opacity, transform;
+  transform: scale(1);
 }
 
 .app-hidden {

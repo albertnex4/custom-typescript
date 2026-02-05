@@ -7,6 +7,7 @@ import mp from "../client/ui/utils/mp-sage";
 type EventCallback<T = any> = (data: T) => void;
 type Unsubscribe = () => void;
 
+//TODO -> Ejemplo de patron suscripción, falta probar y implementar
 interface EventMap {
   // Cliente -> Servidor
   "client:helloWorld": string;
@@ -21,7 +22,6 @@ interface EventMap {
   "ui:languageChanged": string;
   "ui:browserToggled": boolean;
 }
-
 class EventManager {
   private events = new Map<string, Set<EventCallback>>();
   private listeners = new Map<string, Set<EventCallback>>();

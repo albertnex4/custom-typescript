@@ -4,11 +4,17 @@
  * Ejemplo de cómo usar EventManager y Logger centralizados
  */
 
+
 import { eventManager } from "../../../shared/EventManager";
 import TranslationManager from "../../../shared/TranslationManager";
 import { UIManager } from "../ui/UIManager";
 import { WeaponData } from "../../../shared/types/weaponTypes";
 import { applyDriftHandling } from "../utils/vehicleFixHandling";
+import { deleteObjects, deleteWeapons } from "../events/onPlayerDisconnect";
+import { WeaponPool } from "../weapons/weaponPool";
+import { destroyColshapes, initializeColshapes } from "../creationTools/raceCreatorManager";
+import { initNoClip } from "../creationTools/noClipCam";
+import { vehicleManager } from "../events/onPlayerConnect";
 
 // Cargar traducciones
 //TranslationManager.instance.setTranslations('es', es);
@@ -21,8 +27,22 @@ import { applyDriftHandling } from "../utils/vehicleFixHandling";
 export function initializePlayerManagement() {
   //logger.info("Inicializando Player Management");
 
+  
+
+  mp.keys.bind(0x78, true, () => {  // F9 Show Cursor
+    mp.gui.cursor.show(false, true);
+  });
+
   // Escuchar eventos de servidor
+  initNoClip();
   mp.events.add("client:helloWorld", handleHelloWorld);
+
+  mp.events.add("client:initializeColshapes", initializeColshapes);
+  mp.events.add("client:destroyColshapes", destroyColshapes);
+
+  /*mp.keys.bind(0x71, true, () => { // F2 key
+    destroyColshapes();
+  });*/
 
   // Suscribirse a eventos internos
   //eventManager.on("ui:browserToggled", handleBrowserToggled);
@@ -32,6 +52,30 @@ export function initializePlayerManagement() {
   setupDebugMode();
 
   //logger.info("Player Management inicializado");
+  mp.events.add("playerCommand", (command:string) => {
+    const args = command.split(/[ ]+/);
+    const commandName = args[0];
+    const param1 = args[1];
+
+    args.shift();
+
+    switch(commandName){
+      case 'delObj': 
+        mp.gui.chat.push(`Delete ${param1}`);
+        if(param1){
+          WeaponPool.instance.deleteWeaponObject(Number(param1));
+        }else{
+          WeaponPool.instance.deleteAll();
+        }
+        break;
+      case 'removObj':
+          mp.gui.chat.push(`Remove `);
+          WeaponPool.instance.removeAll();
+          break;
+      case 'default':
+        mp.gui.chat.push(`default!`);
+    }
+  });
 }
 
 /**
@@ -128,6 +172,9 @@ function setupDebugMode() {
 			locked?: boolean;
 			numberPlate?: string;
   }
+
+  //Funcion para generar vehiculos en client
+  //Util para tiendas
   mp.events.add("debugSpawnVehicle", async (stringObj:string) => {
     const obj:typeDebugSpawnVehicleParams = JSON.parse(stringObj);
     const objPrint = JSON.stringify(obj);
@@ -160,19 +207,25 @@ function setupDebugMode() {
     if(obj.carPlate) vehicleOptions.numberPlate = obj.carPlate;
     if(obj.carColor) vehicleOptions.color = [obj.carColor,obj.carColor];
     mp.console.logInfo(`vehiclePosition ${vehiclePosition}`);
-    let vehicle = mp.vehicles.new(carModelGameId,vehiclePosition,{...vehicleOptions});
+    if(vehicleManager){
+      let vehicle = vehicleManager.create(carModelGameId,vehiclePosition,{...vehicleOptions});
 
-    // Esperamos un tick para asegurar que la entidad existe físicamente
-    while (!vehicle.handle) await mp.game.waitAsync(10);
+      const carData = vehicleManager.getData(vehicle);
 
-    if(obj.setDriftTest){
-      applyDriftHandling(vehicle);
-    }
+      mp.gui.chat.push(`Car data -> ${carData?.testText}`);
+      
+      // Esperamos un tick para asegurar que la entidad existe físicamente
+      while (!vehicle.handle) await mp.game.waitAsync(10);
 
+      if(obj.setDriftTest){
+        applyDriftHandling(vehicle);
+      }
 
-    mp.console.logInfo(`carModel ${obj.carModel}`);
-    mp.console.logInfo(`carPlate ${obj.carPlate}`);
-     //mp.console.logInfo(`CarPosition ${obj.carPosition[0]} : ${obj.carPosition[1]} : ${obj.carPosition[2]}`);
+      mp.console.logInfo(`carModel ${obj.carModel}`);
+      mp.console.logInfo(`carPlate ${obj.carPlate}`);
+      //mp.console.logInfo(`CarPosition ${obj.carPosition[0]} : ${obj.carPosition[1]} : ${obj.carPosition[2]}`);
+      }
+    //let vehicle = mp.vehicles.new(carModelGameId,vehiclePosition,{...vehicleOptions});
   });
 }
 
@@ -220,7 +273,20 @@ mp.events.addDataHandler("currentWeaponComponents2", async function (player, val
     await mp.game.streaming.requestModelAsync(weaponModelHash).then((loaded) => {
         if (loaded) mp.console.logInfo('model loaded');
     });
-    const weaponHandle = mp.game.weapon.createWeaponObject(obj.GameId,0,x,y,z,true,1,0,0,0);
+    //TODO -> Para este tipo de objetos se tiene que hacer la gestion en client con una pool propia
+    // Ya que la pool de rage no funciona bien con estos objectos de armas
+    const weaponObject = {
+      weaponHash: obj.GameId,
+      ammoCount: 0,
+      position : new mp.Vector3(x, y, z),
+      showWorldModel: true,
+      scale: 1,
+      p7: 0,
+      p8: 0,
+      p9: 0
+    }
+    //const weaponHandle = mp.game.weapon.createWeaponObject(obj.GameId,0,x,y,z,true,1,0,0,0);
+    const weaponHandle = WeaponPool.instance.createWeaponObject(weaponObject);
     mp.game.weapon.giveToPed(player.handle, obj.GameId, 111, true, true);
 
     mp.console.logInfo(`Weapon parseInt(weaponHash): ${obj.GameId}`);

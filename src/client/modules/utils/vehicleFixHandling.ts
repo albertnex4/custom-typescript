@@ -3,6 +3,8 @@
 //Convierte errores silenciosos en excepciones
 'use strict';
 
+
+//Clase para convertir correctamente algunos valores de las fisicas de los vehiculos
 export function fixHandling(vehicle:VehicleMp) {
     if (vehicle === undefined || vehicle.handle === 0)
         return;

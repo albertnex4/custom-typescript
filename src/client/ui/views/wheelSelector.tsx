@@ -122,7 +122,7 @@ const WheelSelector: React.FC = () => {
   const [text ,setText] = useState<string>("No data");
 
   return (
-    <div className="app-root">
+    <div className="wheel-hub">
       <h1>Radial Menu — Demo (Gamepad + Mouse)</h1>
       <p>Open a gamepad and move the left joystick / dpad to navigate; press A / button 0 to select.</p>
       <p>{text}</p>
@@ -432,7 +432,7 @@ const RadialMenu: React.FC<Props> = ({ open = true, onClose }) => {
           textAnchor="middle" 
           style={{ fontSize: 12, pointerEvents: 'none', fontWeight: 'bold' }}
         >
-          {history.length > 0 ? "VOLVER" : hovered.actual ? currentMenu[hovered.actual].label : "SETTINGS"}
+          {history.length > 0 ? "VOLVER" : hovered.actual ? currentMenu[hovered.actual]?.label : "SETTINGS"}
         </text>
 
         <AnimatePresence mode="wait">

@@ -12,8 +12,10 @@
 // Modificar la altura del vehiculo -> setSuspensionHeight
 // Ver mas funciones....
 
+//TODO -> Cambiar VehicleModType por el type global para poder compartir entre servidor/cliente
+
 import { EntityWrapper } from "../../utils/entityWrapper";
-import { VehicleModType } from "./enums";
+import { VehicleModType } from "../../../../shared/models/vehicle/vehicle";
 
 type TypeVehicleServerOptions = {
     category: string;
@@ -50,6 +52,7 @@ type TypeVehicleComponent = Map<number, number>;
 
 //Al extender de EntityWrapper podemos accerder a las propiedades
 // de VehicleMp directamente
+//TODO -> Probar si sin EntityWrapper el codigo funciona igula
 class Vehicle extends EntityWrapper<VehicleMp>{
     private vehicleComponents: null | TypeVehicleComponent = null;
 

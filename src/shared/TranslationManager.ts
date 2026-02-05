@@ -1,9 +1,7 @@
-import type { TranslationKey } from "./translation.types";
-
 type TemplateValues = Record<string, string | number>;
-
 type TranslationsDict = Record<string, string>;
 
+//TODO -> Modificar la key de las traducciones por el texto directamene en ES
 class TranslationManager {
   private static _instance: TranslationManager;
   static get instance() {
@@ -11,7 +9,6 @@ class TranslationManager {
   }
 
   private currentLang = "en";
-  // cache: lang -> flat map of key -> text
   private static cache = new Map<string, TranslationsDict>();
   private listeners = new Set<() => void>();
 
@@ -142,9 +139,7 @@ class TranslationManager {
     return this.t(key, merged, fallback);
   }
 
-  /**
-   * Suscribirse a cambios (React u otros) — devuelve una función para desuscribir
-   */
+  //TODO -> Implmentar listeners
   onChange(cb: () => void) {
     this.listeners.add(cb);
     return () => this.listeners.delete(cb);

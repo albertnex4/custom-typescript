@@ -83,6 +83,28 @@ export const Debug = () => {
         }
       },
     },
+    {
+      type: "showSpeedometer",
+      text: "Mostrar velocímetro",
+      vars: {},
+      varsDefault: {},
+      inputTypes: [],
+      executeFunctionName: "showSpeedometer",
+      executeFunction: (params) => {
+        navigate("/speed"); // react-router hash manejará #/acerca/123
+      },
+    },
+    {
+      type: "showRaceCreator",
+      text: "Mostrar Race Creator",
+      vars: {},
+      varsDefault: {},
+      inputTypes: [],
+      executeFunctionName: "showRaceCreator",
+      executeFunction: (params) => {
+        navigate("/race"); // react-router hash manejará #/acerca/123
+      },
+    }
 
   ];
 

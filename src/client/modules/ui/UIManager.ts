@@ -1,10 +1,3 @@
-// src/client/modules/ui/UIManager.ts
-/**
- * UIManager - Gestiona la UI en CEF
- * Centraliza la lógica de mostrar/ocultar el navegador
- * Evita memory leaks y duplicación de código
- */
-
 export class UIManager {
   //Para eliminar la clase completamente dentro de una funcion propia de la clase
   // const destroy = UIManager.destroyInstance;
@@ -61,31 +54,6 @@ export class UIManager {
       mp.events.add("browserLoadingFailed", this.handlerBrowserLoadingFailed);
   }
 
-  /* Mostrar la UI */
-  show(): void {
-    if (this.isShowing) {
-      console.warn("[UIManager] UI ya está visible");
-      return;
-    }
-
-    try {
-      this.isShowing = true;
-      if(!this.isBrowserCreated){
-        this.browser = mp.browsers.new(this.UI_URL);
-        this.isBrowserCreated = true;
-      }
-      //Funciona si la vista ya muestra algo cuando se carga
-      //En este punto el navegador aun no esta listo crear los eventos
-      this.dispatchEvent('open-app');
-      mp.gui.cursor.show(false, true);
-      
-      mp.console.logInfo("[UIManager] UI mostrada");
-    } catch (error) {
-      console.error("[UIManager] Error al mostrar UI:", error);
-      this.isShowing = false;
-    }
-  }
-
   /**
  * Espera a que el DOM del navegador esté cargado.
  * Si this.isDomReady siempre es false no se ejecutara nada
@@ -126,11 +94,6 @@ export class UIManager {
     }
   }
 
-  /* Toggle (mostrar/ocultar) */
-  toggle(): void {
-    this.isShowing ? this.hide() : this.show();
-  }
-
   async showAsync(): Promise<void> {
     if (this.isShowing) {
       console.warn("[UIManager] UI ya está visible");
@@ -142,21 +105,17 @@ export class UIManager {
       if(!this.isBrowserCreated){
         this.browser = mp.browsers.new(this.UI_URL);
         this.isBrowserCreated = true;
-      }
-      try {
         await this.ready(); 
-      } catch (error) {
-        mp.console.logInfo("[UIManager] UI mostrar ERROR");
-        return;
       }
+
       if(this.actualView !== null){
         this.changeUrl(this.actualView);
       }
       this.dispatchEvent('open-app');
       //TODO -> Desactivar chat
-      // Depende del menu convertir a invisible para todos
       // Añadir config para poder configurar como se tiene que comporatar cada ui
       // Ejemplo wheel menu desactivar controles de accion (apuntar, disparar, etc)
+      // Permitir cursor y movimient
       mp.gui.cursor.show(false, true);
   
       mp.console.logInfo("[UIManager] UI mostrada");
@@ -198,11 +157,15 @@ export class UIManager {
     }
   }
 
+  //Ejemplos de ejecutar distintas funciones JS de UI
+  
+  //Ejecutar evento nativo js
   dispatchEvent(eventName: string, params?: Object): void {
     const jsCommand = `window.dispatchEvent(new Event("${eventName}"));`
     this.execute(jsCommand);
   }
 
+  //Modificar la url a partir de window
   changeUrl(url:string, params?: string){
     this.actualView = url;
     if(this.isDomReady){
@@ -211,11 +174,13 @@ export class UIManager {
     }
   }
 
+  //Ejecutar funciones establecidas en window por la UI
   dispatchFunctions(functionName: string, data:{info:object,data:object}){
     const jsCommand = `window.${functionName}(${JSON.stringify(data.info)}, ${JSON.stringify(data.data)})`
     this.execute(jsCommand);
   }
 
+  //TODO -> Añadir patron suscripción
   /**
    * Suscribirse a cambios de visibilidad ?? REVISAR!!
    */
@@ -261,6 +226,7 @@ export class UIManager {
     }
   }
 
+  //Para controlar mejor cuando la UI esta cargada o no
   /* INICIO EVENTOS NAVEGADOR */
   private onBrowserCreated(browser: BrowserMp) {
       if (browser !== this.browser) return;

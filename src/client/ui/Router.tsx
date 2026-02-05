@@ -5,7 +5,10 @@ import { App as AppTest } from "./App";
 import { WeaponData } from "../../shared/types/weaponTypes";
 import { useState } from "react";
 import { Debug } from "./views/debugView";
+import { Speedometer } from "./components/Speedometer";
 import WheelSelector from "./views/wheelSelector";
+import { RenderRaceCreator } from "./components/RaceCreator";
+import GameUI from "./components/TestMenu";
 
 
 declare global {
@@ -40,16 +43,14 @@ export const App = () => {
         <Route path="/acerca/:param?" element={<Acerca />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/debug" element={<Debug />} />
-
+        <Route path="/speed" element={<Speedometer />} />
+        <Route path="/race" element={<RenderRaceCreator />} />
+        <Route path="/gameui" element={<GameUI />} />
         {/* Ruta default */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
-}
-
-function Inicio() {
-  return <h2>Página de Inicio</h2>;
 }
 
 interface ShopState {
@@ -125,7 +126,7 @@ function NotFound(){
 }
 
 
-//Para hacer botones se esten bloqueados un tiempo
+//Para crear botones que seran inhabilitados un tiempo
 /*const toggleVisibleSafe = () => {
   if (toggleLock) return;
   toggleLock = true;

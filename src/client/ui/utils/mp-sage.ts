@@ -17,7 +17,14 @@ const mpSafe = (window as any).mp ?? {
         console.log("[mp.gui.chat.push MOCK]", ...args);
       }
     }
+  },
+  Vector3: function (x: number, y: number, z: number) {
+    console.log("[mp.Vector3 MOCK]", x, y, z);
+    this.x = x;
+    this.y = y;
+    this.z = z;
   }
+
 };
 
 export default mpSafe;

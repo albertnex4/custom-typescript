@@ -2,7 +2,7 @@ import { isEntity } from "../utils/utils";
 import { UIManager } from "../ui/UIManager";
 
 const HAND_BONE = 57005; // SKEL_R_Hand
-const RAY_DISTANCE = 5.0;
+const RAY_DISTANCE = 10.0;
 const DEBUG_COLOR: RGBA = [255, 0, 0, 250];
 
 type RaycastHit = {
@@ -27,8 +27,13 @@ function rotationToDirection(rot: Vector3): Vector3 {
   );
 }
 
+
+let endPos: Vector3|null = null;
 /**
- * Raycast from player's hand forward
+ * Raycast que sale de la mano del jugador
+ * Se realiza a partir de obtener las cordenadas de la mano
+ * 
+ * Este ejemplo muestra como detectar objetos delante del jugador
  */
 export function raycastFromHand(debug = true): RaycastHit | null {
   const player = mp.players.local;
@@ -42,7 +47,7 @@ export function raycastFromHand(debug = true): RaycastHit | null {
   const direction = rotationToDirection(camRot);
 
   // 3️⃣ End position (5m forward)
-  const endPos = new mp.Vector3(
+  endPos = new mp.Vector3(
     startPos.x + direction.x * RAY_DISTANCE,
     startPos.y + direction.y * RAY_DISTANCE,
     startPos.z + direction.z * RAY_DISTANCE
@@ -61,6 +66,7 @@ export function raycastFromHand(debug = true): RaycastHit | null {
   }
 
   // 5️⃣ Raycast (ORDEN CORRECTO)
+  // TODO -> Para hacer raycast + dibujar linia -> testVisualDrawablePointToPoint
   const hit = mp.raycasting.testPointToPoint(
     startPos,
     endPos,
@@ -114,6 +120,10 @@ function processRaycast(hit: RaycastHit | null) {
     } else {
         entityType = 'default';
         mp.gui.chat.push(`⚠ Entidad nativa detectada (handle ${hit.entity})`);
+    }
+
+    if(endPos){
+      mp.gui.chat.push(`Posicion ${endPos}`);
     }
 
     //TODO -> Mirar si nos interesa actualizar la wheel si es un objeto nativo!!!!
