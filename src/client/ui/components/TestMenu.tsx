@@ -36,6 +36,14 @@ const brands = [
   { id: "6", name: "Pro", price: 18200 },
   { id: "7", name: "Elite", price: 22500 },
   { id: "8", name: "Custom", price: 25000 },
+  { id: "11", name: "Slide", price: 10600 },
+  { id: "12", name: "Missile", price: 11500 },
+  { id: "13", name: "R&T", price: 13400 },
+  { id: "14", name: "CBW", price: 15400 },
+  { id: "15", name: "Street", price: 8900 },
+  { id: "16", name: "Pro", price: 18200 },
+  { id: "17", name: "Elite", price: 22500 },
+  { id: "18", name: "Custom", price: 25000 },
 ]
 
 // -- LOCK SVG ICON --
@@ -63,8 +71,9 @@ export default function GameUI() {
   const [selectedBrand, setSelectedBrand] = useState("5")
   const horizontalScrollRef = useRef<HTMLDivElement>(null)
 
-  const partIndex = bodyParts.findIndex((p) => p.id === selectedPart) + 1
-  const brandIndex = brands.findIndex((b) => b.id === selectedBrand) + 1
+  //Ejempolo vehicle.setMod(modType, modIndex)  modType = Motor modIndex = (Nivel 4) - Aumenta la aceleración base
+  const modType = bodyParts.findIndex((p) => p.id === selectedPart) + 1
+  const modIndex = brands.findIndex((b) => b.id === selectedBrand) + 1
 
   // Wheel scroll for horizontal panel
   useEffect(() => {
@@ -81,20 +90,7 @@ export default function GameUI() {
   return (
     <>
       <style>{`
-        *, *::before, *::after {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
 
-        html, body {
-          background: transparent;
-          overflow: hidden;
-          height: 100%;
-          width: 100%;
-          font-family: Arial, Helvetica, sans-serif;
-          color: white;
-        }
 
         /* === LAYOUT === */
         .game-overlay {
@@ -102,12 +98,11 @@ export default function GameUI() {
           inset: 0;
           display: flex;
           pointer-events: none;
+          max-height: 93vh;
         }
 
         /* === LEFT PANEL === */
         .left-panel {
-          width: 210px;
-          height: 100%;
           padding: 10px;
           flex-shrink: 0;
           pointer-events: auto;
@@ -119,8 +114,8 @@ export default function GameUI() {
           height: 100%;
           background: rgba(0, 0, 0, 0.65);
           backdrop-filter: blur(8px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 4px;
+          width: 36vh;
         }
 
         .panel-header {
@@ -140,8 +135,6 @@ export default function GameUI() {
         .panel-header .subtitle {
           color: rgba(255, 255, 255, 0.5);
           font-size: 12px;
-          font-weight: 500;
-          margin-left: 6px;
         }
 
         .panel-footer {
@@ -266,20 +259,22 @@ export default function GameUI() {
         .bottom-panel-inner {
           background: rgba(0, 0, 0, 0.65);
           backdrop-filter: blur(8px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 4px;
           display: flex;
           align-items: center;
           gap: 8px;
-          padding: 8px;
+          padding: 8px 20px 8px 20px;
+          height: 26vh;
+        }
+
+        .numbers {
+          font-size: 3vh;
+          font-weight: 750;
         }
 
         .bottom-counter {
-          padding: 0 8px;
-          flex-shrink: 0;
-          color: rgba(255, 255, 255, 0.5);
-          font-size: 12px;
-          font-weight: 500;
+          display: inline-block;
+          padding:10px
         }
 
         /* === HORIZONTAL SCROLL === */
@@ -315,8 +310,8 @@ export default function GameUI() {
         .brand-item {
           position: relative;
           flex-shrink: 0;
-          width: 140px;
-          height: 70px;
+          width: 33vh;
+          height: 22vh;
           border-radius: 3px;
           overflow: hidden;
           border: 2px solid transparent;
@@ -411,7 +406,7 @@ export default function GameUI() {
             </div>
 
             <div className="panel-footer">
-              <span>{partIndex}/{bodyParts.length}</span>
+              <label className="numbers">{modType}/{bodyParts.length}</label>
             </div>
           </div>
         </div>
@@ -422,11 +417,10 @@ export default function GameUI() {
 
           {/* Bottom Panel */}
           <div className="bottom-panel">
-            <div className="bottom-panel-inner">
-              <div className="bottom-counter">
-                {brandIndex}/{brands.length}
-              </div>
-
+            <div className="bottom-counter">
+                <label className="numbers">{modIndex}/{brands.length}</label>
+            </div>
+            <div className="bottom-panel-inner">  
               <div className="horizontal-scroll" ref={horizontalScrollRef}>
                 <div className="horizontal-items">
                   {brands.map((brand) => (
